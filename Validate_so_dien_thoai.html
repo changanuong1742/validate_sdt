@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+</head>
+<body>
+
+
+
+
+
+<script>
+
+
+
+    function kiem_tra_sdt(srt) {
+
+        pattern = /((09|03|07|08|05)+([0-9]{8})\b)/g;
+        if (pattern.test(srt)) {
+            document.getElementById("show").innerHTML = 'ok';
+        }
+        else
+            document.getElementById("show").innerHTML = 'Nhập Lại';
+
+    }
+
+
+</script>
+
+<input id="nhap">
+<button onclick="kiem_tra_sdt(document.getElementById('nhap').value)">Kiểm Tra</button>
+<p id="show"></p>
+</body>
+</html>
